@@ -1,0 +1,164 @@
+<div class="course">
+    <div class="container">
+        <div class="row">
+
+            <!-- Course -->
+            <div class="col-lg-8">
+                
+                <div class="course_container">
+                    <div class="course_title">{{element.nameCourse}}</div>
+                    <div class="course_info d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
+
+                        <!-- Course Info Item -->
+                        <div class="course_info_item">
+                            <div class="course_info_title">Teacher:</div>
+                            <div class="course_info_text"><a href="#">{{element.teacherCourse}}</a></div>
+                        </div>
+
+                        <!-- Course Info Item -->
+                        <div class="course_info_item">
+                            <div class="course_info_title">Reviews:</div>
+                            <div [ngClass]="{'rating_r rating_r_5':element.priceCourse > 2000}"><i></i><i></i><i></i><i></i><i></i></div>
+                            <div [ngClass]="{'rating_r rating_r_4':element.priceCourse >1500}"><i></i><i></i><i></i><i></i></div>
+                            <div [ngClass]="{'rating_r rating_r_4':element.priceCourse >1000}"><i></i><i></i><i></i></div>
+                            <div [ngClass]="{'rating_r rating_r_4':element.priceCourse >500}"><i></i><i></i></div>
+                            <div [ngClass]="{'rating_r rating_r_4':element.priceCourse >0}"><i></i></div>
+                        </div>
+                        
+                        <!-- Course Info Item -->
+                        <div class="course_info_item">
+                            <div class="course_info_title" >Categories:</div>
+                            <div class="course_info_text"><a href="#">Languages</a></div>
+                        </div>
+
+                    </div>
+
+                    <!-- Course Image -->
+                    <div class="course_image"><img [src]="element.img" alt=""></div>
+
+                    <!-- Course Tabs -->
+                    
+                </div>
+            </div>
+
+            <!-- Course Sidebar -->
+            <div class="col-lg-4">
+                <div class="sidebar">
+
+                    <!-- Feature -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_section_title">Course Feature</div>
+                        <div class="sidebar_feature">
+                            <div class="course_price">{{element.priceCourse}} Dt</div>
+
+                            <!-- Features -->
+                            <div class="feature_list">
+
+                                <!-- Feature -->
+                                <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                    <div class="feature_title"><i class="fa fa-clock-o" aria-hidden="true"></i><span>Duration:</span></div>
+                                    <div class="feature_text ml-auto">2 weeks</div>
+                                </div>
+
+                                <!-- Feature -->
+                                <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                    <div class="feature_title"><i class="fa fa-file-text-o" aria-hidden="true"></i><span>Lectures:</span></div>
+                                    <div class="feature_text ml-auto">10</div>
+                                </div>
+
+                                <!-- Feature -->
+                                <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                    <div class="feature_title"><i class="fa fa-question-circle-o" aria-hidden="true"></i><span>Lectures:</span></div>
+                                    <div class="feature_text ml-auto">6</div>
+                                </div>
+
+                                <!-- Feature -->
+                                <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                    <div class="feature_title"><i class="fa fa-list-alt" aria-hidden="true"></i><span>Lectures:</span></div>
+                                    <div class="feature_text ml-auto">Yes</div>
+                                </div>
+
+                                <!-- Feature -->
+                                <div class="feature d-flex flex-row align-items-center justify-content-start">
+                                    <div class="feature_title"><i class="fa fa-users" aria-hidden="true"></i><span>Lectures:</span></div>
+                                    <div class="feature_text ml-auto">35</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_section_title">Teacher</div>
+                        <div class="sidebar_teacher">
+                            <div class="teacher_title_container d-flex flex-row align-items-center justify-content-start">
+                                <div class="teacher_image"><img [src]="teacher.img" alt=""></div>
+                                <div class="teacher_title">
+                                    <div class="teacher_name"><a href="#">{{teacher.name}}</a></div>
+                                    <div class="teacher_position">{{teacher.role}}</div>
+                                </div>
+                            </div>
+                            <div class="teacher_meta_container">
+                                <!-- Teacher Rating -->
+                                <div class="teacher_meta d-flex flex-row align-items-center justify-content-start">
+                                    <div class="teacher_meta_title">Experience:</div>
+                                    <div class="teacher_meta_text ml-auto"><span>{{teacher.experience}} year(s)</span><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                                </div>
+                                <!-- Teacher Review -->
+                                <div class="teacher_meta d-flex flex-row align-items-center justify-content-start">
+                                    <div class="teacher_meta_title">Review:</div>
+                                    <div class="teacher_meta_text ml-auto"><span>12k</span><i class="fa fa-comment" aria-hidden="true"></i></div>
+                                </div>
+                                <!-- Teacher Quizzes -->
+                                <div class="teacher_meta d-flex flex-row align-items-center justify-content-start">
+                                    <div class="teacher_meta_title">Quizzes:</div>
+                                    <div class="teacher_meta_text ml-auto"><span>600</span><i class="fa fa-user" aria-hidden="true"></i></div>
+                                </div>
+                            </div>
+                            <div class="teacher_info">
+                                <p>Hi! I am Masion, I’m a marketing & management  eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urna feugiat rutrum nam nulla ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Latest Course -->
+                    <div class="sidebar_section">
+                        <div class="sidebar_section_title">Latest Courses</div>
+                        <div class="sidebar_latest">
+
+                            <!-- Latest Course -->
+                            <div class="latest d-flex flex-row align-items-start justify-content-start">
+                                <div class="latest_image"><div><img src="assets/images/latest_1.jpg" alt=""></div></div>
+                                <div class="latest_content">
+                                    <div class="latest_title"><a href="course.html">How to Design a Logo a Beginners Course</a></div>
+                                    <div class="latest_price">Free</div>
+                                </div>
+                            </div>
+
+                            <!-- Latest Course -->
+                            <div class="latest d-flex flex-row align-items-start justify-content-start">
+                                <div class="latest_image"><div><img src="assets/images/latest_2.jpg" alt=""></div></div>
+                                <div class="latest_content">
+                                    <div class="latest_title"><a href="course.html">Photography for Beginners Masterclass</a></div>
+                                    <div class="latest_price">$170</div>
+                                </div>
+                            </div>
+
+                            <!-- Latest Course -->
+                            <div class="latest d-flex flex-row align-items-start justify-content-start">
+                                <div class="latest_image"><div><img src="assets/images/latest_3.jpg" alt=""></div></div>
+                                <div class="latest_content">
+                                    <div class="latest_title"><a href="course.html">The Secrets of Body Language</a></div>
+                                    <div class="latest_price">$220</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

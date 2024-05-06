@@ -1,0 +1,75 @@
+
+<ul class="nav nav-pills mb-5 d-flex justify-content-center " id="pills-tab" role="tablist">
+    <li class="nav-item w-25 ">
+      <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Course Management</a>
+    </li>
+    <li class="nav-item  w-25 ">
+      <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">User Management</a>
+    </li>
+    
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="tab_panel_title mb-5">Courses Management :</div>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Course</th>
+                <th scope="col">Course's Teacher</th>
+                <th scope="col">Course's Price</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor="let x of courseTab">
+                <th >{{x._id}}</th>
+                <td>{{x.nameCourse}}</td>
+                <td>{{x.teacherCourse}}</td>
+                <td>{{x.priceCourse}} Dt</td>
+                <td class="w-25">
+                    <div class="buttons">
+                        <button  (click)="goToDisplayCourse(x._id)" type="submit" class="comment_button trans_200 mr-2">Display</button>
+                        <button (click)="goToEditCourse(x._id)" type="submit" class="comment_button trans_200 mr-2">Edit</button>
+                        <button  (click)="goDeleteCourse(x._id)"  type="submit" class="comment_button trans_200 mr-2">Delete</button>
+                    </div>
+                </td>
+              </tr>
+            
+            </tbody>
+          </table>
+    </div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="tab_panel_title mb-5">Users Management :</div>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Experience</th>
+                <th scope="col">Courses Name<th>
+                <th scope="col">Role</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor="let x of users">
+                <th >{{x._id}}</th>
+                <td>{{x.name}}</td>
+                <td>{{x.experience}} year(s)</td>
+                <td>{{x.course}}</td>
+                <td>{{x.role}} </td>
+                <td class="w-25">
+                    <div class="buttons">
+                        <button  (click)="goToDisplayUser(x._id)" type="submit" class="comment_button trans_200 mr-2">Display</button>
+                        <button (click)="goToEditUser(x._id)" type="submit" class="comment_button trans_200 mr-2">Edit</button>
+                        <button (click)="goDeleteUser(x._id)" type="submit" class="comment_button trans_200 mr-2">Delete</button>
+                    </div>
+                </td>
+              </tr>
+            
+            </tbody>
+          </table>
+    </div>
+    
+  </div>

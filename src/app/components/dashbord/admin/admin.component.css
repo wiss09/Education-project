@@ -1,0 +1,23 @@
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+.tab_panel_title{
+    
+        text-decoration: underline #14BDEE;
+        text-decoration-style: double;
+    
+}
+/* #nav-pills {
+display: flex;
+justify-content: center;
+width: 100px;
+} */
+.nav-item{
+    text-align: center;
+    
+    
+}
+.nav-link{
+    color: gray;
+}
